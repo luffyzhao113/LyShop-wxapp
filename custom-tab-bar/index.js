@@ -1,4 +1,7 @@
 Component({
+  options: {
+    addGlobalClass: true
+  },
   data: {
     selected: 0,
     list: [{

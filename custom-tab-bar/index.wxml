@@ -1,5 +1,5 @@
 <!--pages/custom-tab-bar/index.wxml-->
-<view class="cu-bar tabbar margin-bottom-xl">
+<view class="cu-bar tabbar">
   <view class="action {{index===selected?'text-red':'text-gray'}}" wx:for="{{list}}" data-item="{{item}}" data-index="{{index}}" bind:tap="switchTab">
     <view class="{{item.icon}} icon" data-item="{{item}}" data-index="{{index}}" catch:tap="switchTab"></view>
     {{item.name}}
