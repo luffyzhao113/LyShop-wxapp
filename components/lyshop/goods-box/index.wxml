@@ -1,0 +1,18 @@
+<!--components/lyshop/goods-box/index.wxml-->
+<view class="goods-box">
+  <view class="{{ link ?'goods-box-header':'goods-box-header-has-link' }}">
+    <view class="{{ link ?'goods-box-header-title':'goods-box-header-title-has-link' }}">
+      <block wx:if="{{ title }}">{{ title }}</block>
+      <slot wx:else name="title" />
+    </view>
+    <view wx:if="{{ link }}" class='goods-box-header-link'>
+      <navigator url="{{ link }}" hover-class="none">
+        <van-icon name="arrow" />
+        <text class="lg text-gray" class="'cuIcon-roundright"></text>
+      </navigator>
+    </view>
+  </view>
+  <view class='goods-box-body'>
+    <slot></slot>
+  </view>
+</view>

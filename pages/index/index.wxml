@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<scroll-view scroll-y class="container">
+
+  <cu-custom bg-color="bg-red">LyShop</cu-custom>
+
+  <view class='header'>
+
+    <navigator url="/pages/search/index" class="search" hover-class="none">
+      <view class="cu-bar bg-white search">
+        <view class="search-form round">
+          <text class="cuIcon-search"></text>
+          <text style="color: var(--grey);">搜索</text>
+        </view>
+      </view>
+    </navigator>
+
+    <view class='search-hot'>
+      <view class='title'>热搜：</view>
+      <view class='value'>
+        <scroll-view scroll-x class='scroll'>
+          <text wx:for="{{hotSearch}}">{{item}}</text>
+        </scroll-view>
+      </view>
+    </view>
+
+    <view class="swiper-view">
+      <view class='swiper-back'></view>
+      <swiper indicator-dots autoplay >
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <view class="shop-nav">
+    <view class='shop-nav-item' wx:for="{{shopNav}}">
+      <image src="{{item.image}}" class='item-image'></image>
+      <view class="van-ellipsis item-text">{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class='categories'>
+    <block wx:for="{{ categories }}">
+      <goods-box title="{{item.name}}" link="">
+        <goods-box-list item="{{item}}"></goods-box-list>
+      </goods-box>
+    </block>
+  </view>
+
+
+</scroll-view>

@@ -1,0 +1,75 @@
+/* pages/shipping-car/index.wxss */
+
+.goods-list .goods-list-item {
+  height: 180rpx;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background-color: var(--white);
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.goods-list .goods-list-item .cu-avatar.xlg {
+  height: 140rpx;
+  width: 140rpx;
+}
+
+.goods-list .goods-list-item .content{
+  width: 480rpx;
+  align-items: top;
+  height: 140rpx;
+}
+
+.goods-list .goods-list-item .content>view:first-child{
+  font-size: 30rpx;
+}
+.goods-list .goods-list-item .content view.padding{
+  padding: 10rpx;
+}
+.goods-list .goods-list-item .content view.price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.submit-order{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+}
+
+.submit-order::after{
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.submit-order .submit{
+  width: 25%;
+  height: 100rpx;
+  float: right;
+}
+
+.submit-order .price,.submit-order .allcheck{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+  height: 100rpx;
+  float: left;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.cu-modal{
+  margin-bottom: 100rpx !important;
+}
+.cu-modal.bottom-modal .cu-dialog{
+  background-color: var(--white);
+  text-align: left;
+}

@@ -1,0 +1,23 @@
+<!--components/lyshop/goods-item/index.wxml-->
+<view class="goods-item">
+  <view class='item-image'>
+    <image src='{{item.url}}' lazy-load></image>
+    <view wx:for="{{item.tags || []}}" wx:for-index="index" wx:key="k" wx:for-item="value">
+      <view class='cu-tag radius sm item-tag'>{{value}}</view>
+    </view>
+  </view>
+  <view class='multi-ellipsis--l2 item-title'>
+    {{item.name}}
+  </view>
+  <view class='item-floor'>
+    <view class="item-price">
+      <text class="price-class">
+        <text class="price-currency">{{item.currency ? item.currency : '¥' }}</text>
+        <text class="text-xxl">{{item.price}}</text>
+      </text>
+    </view>
+    <view class='item-sale'>
+      已售 11 件
+    </view>
+  </view>
+</view>

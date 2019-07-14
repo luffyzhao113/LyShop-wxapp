@@ -1,0 +1,39 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/category/index",
+    "pages/search/index",
+    "pages/shipping-car/index",
+    "pages/goods/index",
+    "pages/member/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/category/index"
+      },
+      {
+        "pagePath": "pages/shipping-car/index"
+      },
+      {
+        "pagePath": "pages/member/index"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e41f19",
+    "navigationBarTitleText": "LyShop",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/components/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

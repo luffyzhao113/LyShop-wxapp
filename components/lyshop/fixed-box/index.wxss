@@ -1,0 +1,13 @@
+/* components/lyshop/fixed-box/index.wxss */
+.scroll-fixed-box{
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.scroll-fixed-box-fixed{
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 999;
+}
+

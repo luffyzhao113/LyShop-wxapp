@@ -1,0 +1,51 @@
+<!--pages/category/index.wxml-->
+<scroll-view scroll-y class="container">
+
+  <cu-custom bg-color="bg-red">LyShop</cu-custom>
+  <fixed-box nav-height="45" offset-top="60">
+    <view class="cu-bar bg-white search">
+      <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="搜索" confirm-type="search" bindconfirm="onSearch"></input>
+      </view>
+    </view>
+
+
+    <view class="category-tabs">
+      <scroll-view scroll-x class="category-tabs-nav bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+        <view class="cu-item {{index==tabCur?'text-red cur':''}}" wx:for="{{categroies}}" wx:key bindtap="tabSelect" data-id="{{item.id}}">
+          {{item.name}}
+        </view>
+      </scroll-view>
+      <view class="category-screen bg-white {{screenBox ? 'text-green' : 'text-red'}} solid-left" bindtap="tabScreen">
+        筛选
+      </view>
+    </view>
+    <view class="category-screen-box bg-white" wx:if="{{screenBox}}">
+      <view class="cu-tag bg-green">下级分类</view>
+      <view class="padding-sm flex flex-wrap">
+        <view class="padding-xs" wx:for="{{10}}">
+          <view class="cu-tag bg-red">标签</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{screenBox}}" class="screenBox-mark" bindtap="tabScreen"></view>
+  </fixed-box>
+
+  <view class="swiper-view">
+    <swiper indicator-dots autoplay>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+
+  <view class="goods-box">
+    <goods-box-list item="{{goodsLists}}"></goods-box-list>
+  </view>
+
+
+</scroll-view>

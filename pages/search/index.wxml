@@ -1,0 +1,35 @@
+<!--pages/search/index.wxml-->
+<scroll-view scroll-y class="container">
+
+  <cu-custom bg-color="bg-red">LyShop</cu-custom>
+  
+  <view class="cu-bar bg-white search">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索" confirm-type="search" bindconfirm="onSearch"></input>
+    </view>
+    <view class="action" bindtap="onCancel">
+      <text>取消</text>
+    </view>
+  </view>
+
+  <view class="search-box">
+    <view class="cu-tag bg-green">热门搜索</view>
+    <view class="padding-sm flex flex-wrap">
+      <view class="padding-xs" wx:for="{{10}}">
+        <view class="cu-tag bg-red">标签</view>
+      </view>
+    </view>
+
+    <view class="cu-tag bg-green">推荐分类</view>
+    <view class="padding-sm flex flex-wrap">
+      <view class="padding-xs" wx:for="{{10}}">
+        <view class="cu-tag bg-red">标签</view>
+      </view>
+    </view>
+
+    <goods-box title="{{goodsLists.name}}">
+        <goods-box-list item="{{goodsLists}}"></goods-box-list>
+      </goods-box>
+  </view>
+</scroll-view>

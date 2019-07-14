@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goods-box-list": "/components/lyshop/goods-box-list/index",
+    "fixed-box": "/components/lyshop/fixed-box/index"
+  }
+}

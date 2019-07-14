@@ -1,0 +1,91 @@
+<!--pages/shipping-car/index.wxml-->
+<scroll-view scroll-y class="container">
+  <cu-custom bg-color="bg-red">LyShop</cu-custom>
+  
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action" bindtap="onModalBg">
+      <text class="cuIcon-location text-orange "></text>
+      <text class="text-grey text-sm">湖南省 长沙市 长沙县</text>
+    </view>
+    <view class="action" bindtap="onCarSetting">
+      <button class="cu-btn round sm bg-red" wx:if="{{carSetting}}">完成</button>
+      <button class="cu-btn round sm bg-orange" wx:else>编辑商品</button>
+    </view>
+  </view>
+
+  <view class="goods-list margin-top">
+    <view class="goods-list-item solid-bottom">
+      <view>
+        <checkbox class='round checked red' checked="{{true}}" value="B"></checkbox>
+      </view>
+      <view class="cu-avatar radius xlg" style="background-image:url(/images/goods-item.jpg);"></view>
+
+      <view class="content">
+        <view class="text-cut text-grey">我于杀戮之中绽放 ,亦如黎明中的花朵</view>
+        <view class="padding text-sm">
+          <text class="text-grey text-cut">衬衫的价格是9磅15便士</text>
+        </view>
+        <view class="price">
+          <view class="text-xxl">
+            <text class="text-price text-red">80.00</text>
+          </view>
+          <view>
+            <stepper value="{{stepper}}" bind:input="onStepper"></stepper>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view wx:if="{{carSetting}}" class="cu-bar bg-white tabbar border submit-order">
+    <view class="bg-red submit">删除商品</view>
+    <view class="bg-orange submit">加入收藏</view>
+    <view class="allcheck">
+      <view class="cu-form-group">
+        <checkbox class="red round margin-right-xs"></checkbox>
+        <view class="title">全选</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class="cu-bar bg-white tabbar border submit-order">
+    <view class="bg-red submit">立即订购</view>
+    <view class="price">
+      <text>总计：</text>
+      <text class="text-price text-red text-xxl">80.00</text>
+    </view>
+  </view>
+
+
+  <view class="cu-modal bottom-modal {{modalIsShow ? 'show' : ''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white solid-bottom">
+        <view class="action">
+          <text class="cuIcon-title text-green"></text>
+          <text>选择收货地址</text>
+        </view>
+      </view>
+      <view class="box">
+
+        <view class="cu-list menu">
+          <view class="cu-item arrow">
+            <view class="content">
+              <text class="cuIcon-location text-grey"></text>
+              <text class="text-grey text-sm">湖南省 衡山县 福田铺乡 千家村四组8号</text>
+            </view>
+          </view>
+        </view>
+
+
+        <divider>或者</divider>
+        <view class="cu-bar btn-group">
+          <button class="cu-btn bg-green shadow-blur round">添加新的收货地址</button>
+        </view>
+      </view>
+
+    </view>
+    <view class="cu-modal-bg" bindtap="onModalBg"></view>
+  </view>
+
+</scroll-view>

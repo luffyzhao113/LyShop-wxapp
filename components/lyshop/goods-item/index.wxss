@@ -1,0 +1,76 @@
+.multi-ellipsis--l2 {
+  -webkit-line-clamp: 2;
+}
+
+.multi-ellipsis--l2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.goods-item {
+  width: 360rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  float: left;
+}
+
+.goods-item .item-image {
+  width: 340rpx;
+  height: 340rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.goods-item .item-image image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.goods-item .item-image .item-tag {
+  position: relative;
+  z-index: 9;
+}
+
+.goods-item .item-title {
+  color: #666;
+  font-size: 18rpx;
+}
+.goods-item .item-floor::after{
+  display: table;
+  content: '';
+  clear: both;
+}
+.goods-item .item-floor{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.goods-item .item-price {
+  float: left;
+  width: 50%;
+}
+.goods-item .item-sale{
+  float: right;
+  text-align: right;
+  width: 50%;
+  font-size: 18rpx;
+  color: #bbbec4;
+}
+.goods-item .item-price .price-class {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #f44;
+}
+
+.goods-item .item-price .price-currency {
+  font-size: 18rpx;
+}
+
+.text-xxl {
+	font-size: 44rpx;
+}

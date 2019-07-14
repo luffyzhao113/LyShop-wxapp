@@ -1,0 +1,2 @@
+<!--pages/member/index.wxml-->
+<cu-custom bg-color="bg-red">LyShop</cu-custom>

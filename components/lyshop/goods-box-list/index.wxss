@@ -1,0 +1,12 @@
+/* components/lyshop/goods-box-list/index.wxss */
+
+.goods-box-list{
+  min-height: 300rpx;
+  position: relative;
+}
+
+.goods-box-list .none-goods{
+  text-align: center;
+  color: #bbbec4;
+}
+

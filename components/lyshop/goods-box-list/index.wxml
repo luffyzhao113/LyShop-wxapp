@@ -1,0 +1,9 @@
+<!--components/lyshop/goods-box-list/index.wxml-->
+<view class='goods-box-list'>
+  <block wx:if="{{item.lists.length > 0}}" wx:for="{{item.lists}}" wx:for-index="idx" wx:for-item="goods">
+    <goods-item item="{{goods}}"></goods-item>
+  </block>
+  <block wx:if="{{item.lists.length === 0}}">
+    <view class='none-goods'>没有找到相关产品</view>
+  </block>
+</view>

@@ -1,0 +1,18 @@
+/* pages/search/index.wxss */
+.container{
+  background-color: #fff;
+}
+.search-box{
+  border-top: #f7f8fa 1rpx solid;
+  box-sizing: border-box;
+}
+
+.search-box .item-body{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.search-box .item-body .item-body-tag{
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+}
