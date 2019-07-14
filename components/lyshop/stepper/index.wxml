@@ -1,12 +1,12 @@
 <!--components/lyshop/stepper/index.wxml-->
-<view class="stepper">
-  <view class="stepper-minus bg-gray radius text-center" hover-class="stepper-minus-hover" hover-stay-time="70" bindtap="minus">
+<view class="stepper grid col-3">
+  <view class="bg-gray radius text-center" hover-class="stepper-minus-hover" hover-stay-time="70" bindtap="minus">
     <text class="cuIcon-move text-black"></text>
   </view>
-  <view class="stepper-input">
+  <view>
     <input type="number" value="{{ value }}"  class="text-center"/>
   </view>
-  <view class="stepper-plus bg-gray radius text-center" hover-class="stepper-plus-hover" hover-stay-time="70" bindtap="plus">
+  <view class="bg-gray radius text-center" hover-class="stepper-plus-hover" hover-stay-time="70" bindtap="plus">
     <text class="cuIcon-add text-black"></text>
   </view>
 </view>
