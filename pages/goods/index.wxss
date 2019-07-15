@@ -1,4 +1,11 @@
 /* pages/goods/index.wxss */
+tab-bar{
+  height: 0;
+  background: red;
+}
+.swiper-goods{
+  height: 750rpx;
+}
 .screen-swiper{
   position: absolute;
   left:0;
@@ -6,4 +13,15 @@
   z-index: 999;
   height: 750rpx;
   width: 750rpx;
+}
+.goods-detail{
+  width: 100%;
+}
+.goods-detail image{
+  max-width: 100%;
+}
+.shop{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

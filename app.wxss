@@ -1,13 +1,7 @@
 /**app.wxss**/
 @import "/components/colorui/main.wxss";
-@import "/components/colorui/_icon.wxss";
+@import "/components/colorui/icon.wxss";
 @import "/components/colorui/animation.wxss";
-
-[class*="cuIcon-"] {
-	font-family: "cuIcon";
-	font-size: inherit;
-	font-style: normal;
-}
 
 .ellipsis {
   overflow: hidden;
@@ -51,6 +45,10 @@ page {
   box-sizing: border-box;
   position: relative;
   padding-bottom: 100rpx;
+}
+
+.container.container-page{
+   padding-bottom: 0rpx;
 }
 
 

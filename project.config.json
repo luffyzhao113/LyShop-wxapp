@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.0",
+	"libVersion": "2.6.6",
 	"projectname": "lyshop",
 	"scripts": {
 		"beforeCompile": "npm run compile",

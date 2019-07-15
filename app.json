@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/goods/index",
     "pages/index/index",
     "pages/category/index",
     "pages/search/index",
     "pages/shipping-car/index",
-    "pages/goods/index",
+    
     "pages/member/index"
   ],
   "tabBar": {

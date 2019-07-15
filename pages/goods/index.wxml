@@ -2,10 +2,81 @@
 <scroll-view scroll-y class="container">
   <cu-custom isBack="{{true}}"></cu-custom>
 
-  <swiper class="screen-swiper square-dot bg-red" style="padding-top:{{StatusBar}}px;" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
-    <swiper-item wx:for="{{swiperList}}" wx:key>
-      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
-      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
-    </swiper-item>
-  </swiper>
+  <view class='swiper-goods' style="margin-top: -{{CustomBar}}px;">
+    <swiper class="screen-swiper square-dot bg-black" style="padding-top:{{StatusBar}}px;" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+      <swiper-item wx:for="{{swiperList}}" wx:key>
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class='bg-white padding'>
+    <view class="grid col-2 margin-bottom">
+      <view class="text-price text-red text-xxl">80.00</view>
+      <view class='text-right'>
+        <button class="cu-btn icon sm margin-right-xs">
+          <text class='cuIcon-favor'></text>
+        </button>
+        <button class="cu-btn icon sm">
+          <text class='cuIcon-share'></text>
+        </button>
+      </view>
+    </view>
+    <view class="text-df text-black text-bold margin-bottom">无痕内裤女士冰丝款中腰一片式透气大码全棉100%纯棉抗菌裆三角裤</view>
+    <view class="grid col-3">
+      <view>
+        <text class="cuIcon-roundcheckfill text-green"></text> 正品保障
+      </view>
+      <view>
+        <text class="cuIcon-roundcheckfill text-green"></text> 极速发货
+      </view>
+      <view>
+        <text class="cuIcon-roundcheckfill text-green"></text> 7天退换货
+      </view>
+    </view>
+  </view>
+
+  <view class='cu-bar bg-white margin-tb'>
+    <view class="action">
+      <text class='cuIcon-titles text-orange '></text> 选择
+      <text class='text-sm margin-left'>规格</text>
+    </view>
+
+    <view class='action'>
+      <text class='cuIcon-right'></text>
+    </view>
+  </view>
+
+  <view class="bg-white">
+    <scroll-view scroll-x class="bg-white nav text-center">
+      <view class="cu-item {{0==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="{{0}}">
+        商品详情
+      </view>
+      <view class="cu-item {{1==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="{{1}}">
+        评价
+      </view>
+    </scroll-view>
+    <view class='border-top'>
+      <view wx:if="{{0==TabCur}}" class='goods-detail text-center'>
+        <image wx:for="{{swiperList}}" wx:key src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      </view>
+      <view wx:if="{{1==TabCur}}" class='goods-assess'></view>
+    </view>
+  </view>
 </scroll-view>
+<view class="cu-bar bg-white tabbar border shop">
+  <button class="action" open-type="contact">
+    <view class="cuIcon-service text-green">
+    </view>
+    客服
+  </button>
+  <view class="action">
+    <view class="cuIcon-cart">
+      <view class="cu-tag badge">99</view>
+    </view>
+    购物车
+  </view>
+  <view class="bg-orange submit">加入购物车</view>
+  <view class="bg-red submit">立即订购</view>
+</view>
