@@ -3,7 +3,7 @@
   <cu-custom isBack="{{true}}"></cu-custom>
 
   <view class='swiper-goods' style="margin-top: -{{CustomBar}}px;">
-    <swiper class="screen-swiper square-dot bg-black" style="padding-top:{{StatusBar}}px;" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper class="screen-swiper square-dot bg-red" style="padding-top:{{StatusBar}}px;" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
       <swiper-item wx:for="{{swiperList}}" wx:key>
         <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
         <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
@@ -49,7 +49,7 @@
   </view>
 
   <view class="bg-white">
-    <scroll-view scroll-x class="bg-white nav text-center">
+    <scroll-view scroll-x class="bg-white nav text-center solid-bottom">
       <view class="cu-item {{0==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="{{0}}">
         商品详情
       </view>
@@ -61,7 +61,31 @@
       <view wx:if="{{0==TabCur}}" class='goods-detail text-center'>
         <image wx:for="{{swiperList}}" wx:key src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
       </view>
-      <view wx:if="{{1==TabCur}}" class='goods-assess'></view>
+      <view wx:if="{{1==TabCur}}" class='goods-assess cu-list menu-avatar'>
+        <view class="assess padding-tb">
+          <view class='flex flex-wrap'>
+            <view class="basis-xs padding-xs text-right">
+              <view class='cu-avatar lg round' style="background-image:url(/images/g01.jpg)"></view>
+            </view>
+            <view class="basis-xl padding-lr">
+              <view class='text-lg text-orange'>三棒子</view>
+              <view class='text-sm padding-tb-xs content'>
+                我是二狗,一只来自猪厂的产品策划。和了不起的同事们课余时间做了一个小程序「网易灰评」,有幸赶上了微信首批上线的小程序之一我是二狗,一只来自猪厂的产品策划。和了不起的同事们课余时间做了一个小程序「网易灰评」,有幸赶上了微信首批上线的小程序之一我是二狗,一只来自猪厂的产品策划。和了不起的同事们课余时间做了一个小程序「网易灰评」,有幸赶上了微信首批上线的小程序之一我是二狗,一只来自猪厂的产品策划。和了不起的同事们课余时间做了一个小程序「网易灰评」,有幸赶上了微信首批上线的小程序之一我是二狗,一只来自猪厂的产品策划。和了不起的同事们课余时间做了一个小程序「网易灰评」,有幸赶上了微信首批上线的小程序之一
+              </view>
+              <view class="cu-avatar-group margin-tb">
+                <view class="cu-avatar round lg" wx:for="{{7}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
+              </view>
+              <view class='text-right'>2015-02-21 20:21:00</view>
+
+              <view class="bg-orange padding-sm margin-tb radius text-sm">
+                客服妹妹回复：
+                  妹妹，你在帮他们给黑暗找借口吗?
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
     </view>
   </view>
 </scroll-view>
