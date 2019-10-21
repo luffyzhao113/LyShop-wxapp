@@ -1,0 +1,7 @@
+/* pages/account/index.wxss */
+.profile-add{
+  left: 0rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,7 +1,7 @@
 <!--pages/shipping-car/index.wxml-->
 <scroll-view scroll-y class="container">
-  <cu-custom bg-color="bg-red">LyShop</cu-custom>
-  
+  <cu-custom bg-color="bg-gradual-red">LyShop</cu-custom>
+
   <view class="cu-bar bg-white solid-bottom">
     <view class="action" bindtap="onModalBg">
       <text class="cuIcon-location text-orange "></text>
@@ -56,36 +56,35 @@
       <text class="text-price text-red text-xxl">80.00</text>
     </view>
   </view>
+</scroll-view>
 
-
-  <view class="cu-modal bottom-modal {{modalIsShow ? 'show' : ''}}">
-    <view class="cu-dialog">
-      <view class="cu-bar bg-white solid-bottom">
-        <view class="action">
-          <text class="cuIcon-title text-green"></text>
-          <text>选择收货地址</text>
-        </view>
+<!-- 遮罩层 -->
+<view class="cu-modal bottom-modal {{modalIsShow ? 'show' : ''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white solid-bottom">
+      <view class="action">
+        <text class="cuIcon-title text-green"></text>
+        <text>选择收货地址</text>
       </view>
-      <view class="box">
+    </view>
+    <view class="box">
 
-        <view class="cu-list menu">
-          <view class="cu-item arrow">
-            <view class="content">
-              <text class="cuIcon-location text-grey"></text>
-              <text class="text-grey text-sm">湖南省 衡山县 福田铺乡 千家村四组8号</text>
-            </view>
+      <view class="cu-list menu">
+        <view class="cu-item arrow">
+          <view class="content">
+            <text class="cuIcon-location text-grey"></text>
+            <text class="text-grey text-sm">湖南省 衡山县 福田铺乡 千家村四组8号</text>
           </view>
         </view>
-
-
-        <divider>或者</divider>
-        <view class="cu-bar btn-group">
-          <button class="cu-btn bg-green shadow-blur round">添加新的收货地址</button>
-        </view>
       </view>
 
-    </view>
-    <view class="cu-modal-bg" bindtap="onModalBg"></view>
-  </view>
 
-</scroll-view>
+      <divider>或者</divider>
+      <view class="cu-bar btn-group">
+        <button class="cu-btn bg-green shadow-blur round">添加新的收货地址</button>
+      </view>
+    </view>
+
+  </view>
+  <view class="cu-modal-bg" bindtap="onModalBg"></view>
+</view>

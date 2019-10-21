@@ -1,0 +1,36 @@
+/* pages/profile/index.wxss */
+ .cu-form-group .title {
+  min-width: calc(4em);
+}
+
+
+.cu-form-group .avatar {
+  flex: 1;
+  padding-right: 40rpx;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+}
+
+.cu-form-group .avatar::after {
+  font-family: "cuIcon";
+  display: block;
+  content: "\e6a3";
+  position: absolute;
+  font-size: 34rpx;
+  color: var(--grey);
+  line-height: 64rpx;
+  width: 60rpx;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  right: -20rpx;
+  margin: auto;
+}
+
+.profile-add{
+  left: 0rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

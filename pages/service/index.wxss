@@ -1,0 +1,8 @@
+/* pages/service/index.wxss */
+.margin-0 {
+  margin: 0 !important;
+}
+
+.grid.grid-square>view{
+  margin-bottom: 0rpx;
+}

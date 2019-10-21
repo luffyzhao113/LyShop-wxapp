@@ -4,6 +4,6 @@
     <goods-item item="{{goods}}"></goods-item>
   </block>
   <block wx:if="{{item.lists.length === 0}}">
-    <view class='none-goods'>没有找到相关产品</view>
+    <view class="error-page text-center">没有找到相关产品</view>
   </block>
 </view>

@@ -1,0 +1,34 @@
+<!--pages/profile/index.wxml-->
+<scroll-view scroll-y="{{true}}" class="container page">
+  <cu-custom is-back="{{true}}" bg-color="bg-gradual-pink"></cu-custom>
+
+  <view class="cu-list bg-white">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}} solid-bottom flex justify-start align-center" wx:for="{{40}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+      <view class="cu-avatar round lg bg-{{Colors[index % 6]}} padding margin-xs">
+        <text>港</text>
+      </view>
+      <view class="content padding-xs text-sm">
+        <view class="text-gray">
+          文晓港  <text class="text-xs"> 18620313779 </text>
+        </view>
+        <view class="text-sm padding-xs multi-ellipsis--l2">
+          <view class="cu-tag radius sm bg-red">默认</view> <view class="cu-tag radius sm">公司</view> 广东省深圳市南山区后海中州控股大厦A座31楼 陆地方舟集团 方舟货的有限公司
+        </view>
+      </view>
+      <view class="action text-center text-gray solid-left">
+        <text>编辑</text>
+      </view>
+      <view class="move">
+        <view class="bg-grey">置顶</view>
+        <view class="bg-red">删除</view>
+      </view>
+    </view>
+  </view>
+
+
+</scroll-view>
+
+  <!-- 底部 -->
+<view class="cu-bar bg-white tabbar border address-add">
+  <navigator url="/pages/delivery-address-form/index" hover-class="none" class="bg-red submit">新增收货地址</navigator>
+</view>

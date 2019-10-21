@@ -10,9 +10,9 @@
 }
 .goods-box .goods-box-header{
   position: relative;
-  height: 60rpx;
+  height: 80rpx;
   padding: 0 30rpx;
-  line-height: 60rpx;
+  line-height: 80rpx;
   border-bottom: 1rpx #e9eaec solid;
 }
 .goods-box .goods-box-header::after{
@@ -23,9 +23,9 @@
 .goods-box .goods-box-header-has-link{
   text-align: center;
   position: relative;
-  height: 60rpx;
+  height: 80rpx;
   padding: 0 30rpx;
-  line-height: 60rpx;
+  line-height: 80rpx;
   border-bottom: 1rpx #e9eaec solid;
 }
 
@@ -72,7 +72,7 @@
   position: absolute;
   content: ' ';
   width: 10rpx;
-  height: 40rpx;
+  height: 60rpx;
   top: 10rpx;
   background: #e41f19;
   left:10rpx;

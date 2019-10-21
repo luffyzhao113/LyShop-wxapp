@@ -1,2 +1,109 @@
 <!--pages/member/index.wxml-->
-<cu-custom bg-color="bg-red">LyShop</cu-custom>
+<scroll-view scroll-y class="container">
+  <view class="bg-gradual-red">
+    
+    <view class="UCenter-bg none-bg">
+      <block wx:if="{{hasUserInfo}}">
+        <image src="{{userInfo.avatarUrl}}" class="png cu-avatar round xl margin-bottom-sm" mode="widthFix"></image>
+        <view class="text-xl">
+          {{userInfo.nickName}}
+        </view>
+      </block>
+      <block wx:else>
+        <view>
+          <button class="cu-btn margin-tb-sm bg-white" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+        </view>
+      </block>
+      <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+    </view>
+  </view>
+  <view class="padding flex flex-wrap text-center text-grey bg-white shadow-warp">
+    <navigator class="basis-xs" url="/pages/order/index" hover-class="none">
+      <view class="text-xxl">
+        <text class="cuIcon-pay"></text>
+      </view>
+      待付款
+    </navigator>
+
+    <navigator class="basis-xs" url="/pages/order/index" hover-class="none">
+      <view class="text-xxl">
+        <text class="cuIcon-send"></text>
+      </view>
+      待发货
+    </navigator>
+
+    <navigator class="basis-xs" url="/pages/order/index" hover-class="none">
+      <view class="text-xxl">
+        <text class="cuIcon-deliver"></text>
+      </view>
+      待收货
+    </navigator>
+
+    <navigator class="basis-xs" url="/pages/order/index" hover-class="none">
+      <view class="text-xxl">
+        <text class="cuIcon-comment"></text>
+      </view>
+      待评价
+    </navigator>
+
+    <navigator class="basis-xs" url="/pages/service/index" hover-class="none">
+      <view class="text-xxl">
+        <text class="cuIcon-recharge"></text>
+      </view>
+      退款维权
+    </navigator>
+
+  </view>
+
+  <view class="cu-list menu sm-border card-menu margin-top">
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/order/index" hover-class="none">
+        <text class="cuIcon-goods text-orange"></text>
+        <text class="text-grey">我的订单</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-like text-pink"></text>
+        <text class="text-grey">我的收藏</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-footprint text-green"></text>
+        <text class="text-grey">我的足迹</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/delivery-address/index" hover-class="none">
+        <text class="cuIcon-addressbook text-brown"></text>
+        <text class="text-grey">收货地址</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/profile/index" hover-class="none">
+        <text class="cuIcon-profile text-red"></text>
+        <text class="text-grey">个人信息</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/account/index" hover-class="none">
+        <text class="cuIcon-settings text-purple"></text>
+        <text class="text-grey">账号设置</text>
+      </navigator>
+    </view>
+
+  </view>
+
+  <view class="padding-lr">
+    <divider content-class="bg-ghost-white">luffyzhao@vip.126.com</divider>
+  </view>
+
+
+</scroll-view>

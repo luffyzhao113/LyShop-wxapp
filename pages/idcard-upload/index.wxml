@@ -1,0 +1,5 @@
+<!--pages/idcard-upload/index.wxml-->
+<view class="container page">
+  <cu-custom is-back="{{true}}" bg-color="bg-gradual-pink"></cu-custom>
+  
+</view>

@@ -1,0 +1,24 @@
+<!--pages/account/index.wxml-->
+<view class="container">
+  <cu-custom is-back="{{true}}" bg-color="bg-gradual-pink"></cu-custom>
+
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="title">绑定手机</view>
+      <button class="cu-btn bg-green sm shadow" open-type="getPhoneNumber">获取手机号码</button>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">实名认证</view>
+      <navigator url="/pages/idcard-upload/index" hover-class="none">
+        <text class="text-xs margin-right-sm text-grey">已实名认证</text>
+        <text class="cuIcon-right "></text>
+      </navigator>
+    </view>
+  </form>
+</view>
+
+<!-- 底部 -->
+<view class="cu-bar bg-white tabbar border profile-add">
+  <view class="bg-red submit">退出登录</view>
+</view>

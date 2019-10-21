@@ -1,5 +1,6 @@
 // components/lyshop/fixed-box/index.js
 import { basic } from '../mixins/basic.js';
+const app = getApp();
 
 Component({
   behaviors: [basic],
@@ -20,7 +21,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-    wrapStyle: ''
+    wrapStyle: '',
+    offsetTopPx: 0,
+    navHeightPx: 0,
   },
 
   ready() {
@@ -32,16 +35,16 @@ Component({
    */
   methods: {
     observerContentScroll() {
-      const { navHeight, offsetTop } = this.data;
+      const { navHeightPx, offsetTopPx } = this.data;
       const { windowHeight, windowWidth } = wx.getSystemInfoSync();
-
+   
       this.createIntersectionObserver().disconnect();
       this.createIntersectionObserver().relativeToViewport({
-        top: -(navHeight + offsetTop)
+        top: -(navHeightPx + offsetTopPx)
       })
         .observe('.scroll-fixed-box', (res) => {
           const { top } = res.boundingClientRect;
-          if (top > offsetTop) {
+          if (top > offsetTopPx) {
             this.setWrapStyle();
           } else {
             this.setWrapStyle(res.intersectionRatio > 0 ? 'bottom' : 'top');
@@ -50,18 +53,19 @@ Component({
 
     },
     setWrapStyle(position) {
-      const { offsetTop } = this.data;
+      const { offsetTopPx } = this.data;
+      
       let wrapStyle;
       switch (position) {
         case 'top':
           wrapStyle = `
-            top: ${offsetTop}px;
+            top: ${offsetTopPx}px;
             position: fixed;
           `;
           break;
         case 'bottom':
           wrapStyle = `
-            bottom: ${offsetTop}px;
+            bottom: ${offsetTopPx}px;
             position: fixed;
           `;
           break;
@@ -73,5 +77,22 @@ Component({
         return;
       this.setData({ wrapStyle });
     },
+    rpx2px(number) {
+      return number / (750 / app.globalData.SystemInfo.screenWidth);
+    }
+  },
+  observers: {
+    offsetTop(e){
+      this.setData({
+        offsetTopPx: this.rpx2px(e)
+      });
+      this.observerContentScroll()
+    },
+    navHeight(e){
+      this.setData({
+        navHeightPx: this.rpx2px(e)
+      });
+      this.observerContentScroll()
+    }
   }
 })

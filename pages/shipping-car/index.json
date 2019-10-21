@@ -2,5 +2,6 @@
   "usingComponents": {
     "stepper": "/components/lyshop/stepper/index",
     "divider": "/components/lyshop/divider/index"
-  }
+  },
+  "disableScroll": true
 }

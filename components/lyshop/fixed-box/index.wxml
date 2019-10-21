@@ -1,6 +1,6 @@
 <!--components/lyshop/fixed-box/index.wxml-->
-<view class="scroll-fixed-box" style="padding-top: {{navHeight}}px;">
-  <view class="scroll-fixed-box-fixed" style="height: {{navHeight}}px; {{wrapStyle}}">
+<view class="scroll-fixed-box" style="padding-top: {{navHeightPx}}px;">
+  <view class="scroll-fixed-box-fixed" style="height: {{navHeightPx}}px; {{wrapStyle}}">
     <slot></slot>
   </view>
 </view>

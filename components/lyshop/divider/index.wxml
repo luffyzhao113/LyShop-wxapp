@@ -1,12 +1,12 @@
 <!--components/lyshop/divider/index.wxml-->
-<view class="i-divider i-class" style="{{parse.getStyle(color,size,height)}}">
-    <view class="i-divider-content" wx:if="{{content !== ''}}">
+<view class="divider" style="{{parse.getStyle(color,size,height)}}">
+    <view class="divider-content {{contentClass}}" wx:if="{{content !== ''}}">
         {{content}}
     </view>
-    <view class="i-divider-content" wx:else>
+    <view class="divider-content {{contentClass}}" wx:else>
         <slot></slot>
     </view>
-    <view class="i-divider-line" style="background:{{lineColor}}"></view>
+    <view class="divider-line {{lineClass}}"></view>
 </view>
 <wxs module="parse">
     module.exports = {

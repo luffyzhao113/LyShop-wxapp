@@ -1,0 +1,54 @@
+<!--pages/delivery-address-form/index.wxml-->
+<scroll-view class="container">
+  <cu-custom is-back="{{true}}" bg-color="bg-gradual-pink"></cu-custom>
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="title">收货人</view>
+      <input placeholder="请输入收货人"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">手机号码</view>
+      <input placeholder="请输入手机号码"></input>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-blue">
+          +86
+        </view>
+        <view class="cu-tag line-blue">
+          中国大陆
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">地址选择</view>
+      <picker mode="region" bindchange="RegionChange" value="{{region}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group">
+      <textarea maxlength="-1" placeholder="详细地址:如道路、门牌、小区、楼栋号、单元室等"></textarea>
+    </view>
+
+    <view class="cu-form-group margin-top">
+      <view class="title">地址标签</view>
+      <picker bindchange="TagsChange" value="{{dataRow.tag}}" range="{{tags}}">
+        <view class="picker">
+          {{dataRow.tag?tags[dataRow.tag]:'无'}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">默认地址</view>
+      <switch class="orange radius sm"></switch>
+    </view>
+
+  </form>
+</scroll-view>
+
+<!-- 底部 -->
+<view class="cu-bar bg-white tabbar border address-add">
+  <view class="bg-red submit">新增收货地址</view>
+</view>

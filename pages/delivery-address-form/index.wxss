@@ -1,0 +1,12 @@
+/* pages/delivery-address-form/index.wxss */
+
+.address-add{
+  left: 0rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+ 
+ .cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}

@@ -1,7 +1,7 @@
 <!--pages/search/index.wxml-->
 <scroll-view scroll-y class="container">
 
-  <cu-custom bg-color="bg-red">LyShop</cu-custom>
+  <cu-custom bg-color="bg-gradual-red">LyShop</cu-custom>
   
   <view class="cu-bar bg-white search">
     <view class="search-form round">

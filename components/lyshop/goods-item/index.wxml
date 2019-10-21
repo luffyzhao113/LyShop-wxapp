@@ -1,5 +1,5 @@
 <!--components/lyshop/goods-item/index.wxml-->
-<navigator class="goods-item" open-type="navigate" hover-class='none' url="/pages/goods/index">
+<navigator class="goods-item bg-white" open-type="navigate" hover-class='none' url="/pages/goods/index">
   <view class='item-image'>
     <image src='{{item.url}}' lazy-load></image>
     <view wx:for="{{item.tags || []}}" wx:for-index="index" wx:key="k" wx:for-item="value">

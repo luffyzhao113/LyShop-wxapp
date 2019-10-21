@@ -25,26 +25,21 @@
 }
 
 
+
+
 page {
   font-size: 24rpx;
+  /* background-color: #f8f8f9; */
 }
 
-
-.bg-red {
-  background-color: #e41f19;
-}
-
-.text-red {
-  color: #e41f19;
-}
 
 .container {
   height: 100vh;
   width: 100vw;
-  background-color: #f8f8f9;
   box-sizing: border-box;
   position: relative;
   padding-bottom: 100rpx;
+  -webkit-overflow-scrolling:auto;
 }
 
 .container.container-page{
@@ -63,4 +58,8 @@ page {
 
 .cu-dialog{
    z-index: 1112;
+}
+
+.error-page{
+  padding: 150rpx 0;
 }

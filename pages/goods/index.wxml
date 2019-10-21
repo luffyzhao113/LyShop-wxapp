@@ -24,7 +24,7 @@
       </view>
     </view>
     <view class="text-df text-black text-bold margin-bottom">无痕内裤女士冰丝款中腰一片式透气大码全棉100%纯棉抗菌裆三角裤</view>
-    <view class="grid col-3">
+    <view class="grid col-3 text-center">
       <view>
         <text class="cuIcon-roundcheckfill text-green"></text> 正品保障
       </view>
@@ -37,7 +37,7 @@
     </view>
   </view>
 
-  <view class='cu-bar bg-white margin-tb'>
+  <view class='cu-bar bg-white margin-tb' bindtap="onChangeSpec">
     <view class="action">
       <text class='cuIcon-titles text-orange '></text> 选择
       <text class='text-sm margin-left'>规格</text>
@@ -85,10 +85,15 @@
           </view>
 
         </view>
+        <!-- <view class="error-page text-center">暂无评论</view> -->
       </view>
     </view>
   </view>
 </scroll-view>
+
+<goods-spec show="{{isSpecShow}}"></goods-spec>
+
+<!-- 底部 -->
 <view class="cu-bar bg-white tabbar border shop">
   <button class="action" open-type="contact">
     <view class="cuIcon-service text-green">

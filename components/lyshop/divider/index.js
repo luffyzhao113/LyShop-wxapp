@@ -1,5 +1,7 @@
 Component({
-  externalClasses: ['i-class'],
+  options: {
+    addGlobalClass: true
+  },
   properties: {
     content: {
       type: String,
@@ -13,9 +15,13 @@ Component({
       type: String,
       value: '#80848f'
     },
-    lineColor: {
+    contentClass: {
       type: String,
-      value: '#e9eaec'
+      value: 'bg-white'
+    },
+    lineClass: {
+      type: String,
+      value: 'solid-bottom'
     },
     size: {
       type: String,

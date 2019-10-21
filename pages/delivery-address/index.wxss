@@ -1,0 +1,18 @@
+/* pages/profile/index.wxss */
+
+.cu-list>.cu-item .move {
+  top:0;
+}
+
+
+.cu-list > .cu-item .action{
+  width: 200rpx;
+}
+
+.address-add{
+  left: 0rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+ 

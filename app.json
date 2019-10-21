@@ -1,12 +1,18 @@
 {
   "pages": [
-    "pages/goods/index",
+    "pages/idcard-upload/index",
+    "pages/account/index",
     "pages/index/index",
+    "pages/delivery-address-form/index",
+    "pages/delivery-address/index",
     "pages/category/index",
     "pages/search/index",
     "pages/shipping-car/index",
-    
-    "pages/member/index"
+    "pages/member/index",
+    "pages/order/index",
+    "pages/service/index",
+    "pages/profile/index",
+    "pages/goods/index"
   ],
   "tabBar": {
     "custom": true,

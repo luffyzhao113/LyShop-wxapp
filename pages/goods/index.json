@@ -1,2 +1,5 @@
 {
+  "usingComponents": {
+    "goods-spec": "/components/lyshop/goods-spec/index"
+  }
 }

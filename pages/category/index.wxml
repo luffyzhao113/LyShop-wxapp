@@ -1,9 +1,9 @@
 <!--pages/category/index.wxml-->
 <scroll-view scroll-y class="container">
 
-  <cu-custom bg-color="bg-red">LyShop</cu-custom>
+  <cu-custom bg-color="bg-gradual-red">LyShop</cu-custom>
   
-  <fixed-box nav-height="90" offset-top="59">
+  <fixed-box nav-height="190" offset-top="32">
     <view class="cu-bar bg-white search">
       <view class="search-form round">
         <text class="cuIcon-search"></text>
@@ -44,7 +44,7 @@
   </view>
 
 
-  <view class="goods-box">
+  <view class="goods-box bg-white cf">
     <goods-box-list item="{{goodsLists}}"></goods-box-list>
   </view>
 

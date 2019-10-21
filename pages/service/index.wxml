@@ -1,0 +1,95 @@
+<!--pages/service/index.wxml-->
+<view class="container">
+  <cu-custom is-back="{{true}}" bg-color="bg-gradual-pink"></cu-custom>
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="商品名称/商品编号/订单号" confirm-type="search"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-red shadow-blur round">搜索</button>
+    </view>
+  </view>
+
+  <view scroll-x class="bg-white border-top nav shadow-blur grid col-2 " scroll-with-animation>
+    <view class="cu-item {{0==TabCur?'text-red cur':''}} margin-0 text-center" bindtap="tabSelect" data-id="0">
+      售后申请
+    </view>
+    <view class="cu-item {{1==TabCur?'text-red cur':''}} margin-0 text-center" bindtap="tabSelect" data-id="1">
+      申请记录
+    </view>
+  </view>
+
+  <view class="padding-tb-sm margin-top bg-white">
+    <view class="padding-bottom-sm padding-left-sm solid-bottom text-xs text-grey">
+      订单号：2019072754125412
+    </view>
+    <view class="flex flex-wrap">
+      <view class="basis-xs padding-xs radius grid col-1 grid-square">
+        <view class="bg-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10002.jpg);"></view>
+      </view>
+      <view class="basis-xl padding-xs">
+        <view class="multi-ellipsis--l2 text-sm">
+          美的（Midea）美的28cm麦饭石色不粘锅炒锅 厚底少油烟煎炒锅 燃气电磁炉通用MP-CJ28WOK301
+        </view>
+        <view class="text-grey text-xs">
+          数量: 1
+        </view>
+        <view class="cf">
+          <button class="fr cu-btn round sm bg-red margin-right-xs">申请售后</button>
+        </view>
+      </view>
+    </view>
+    <view class="flex flex-wrap">
+      <view class="basis-xs padding-xs radius grid col-1 grid-square">
+        <view class="bg-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10002.jpg);"></view>
+      </view>
+      <view class="basis-xl padding-xs">
+        <view class="multi-ellipsis--l2 text-sm">
+          美的（Midea）美的28cm麦饭石色不粘锅炒锅 厚底少油烟煎炒锅 燃气电磁炉通用MP-CJ28WOK301
+        </view>
+        <view class="text-grey text-xs">
+          数量: 1
+        </view>
+        <view class="cf">
+          <view class="fl text-grey padding-tb-xs text-xs">
+            <text class="cuIcon-info"></text> 该商品已超过售后期
+          </view>
+          <button class="fr cu-btn round sm bg-grey margin-right-xs" disabled>申请售后</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-tb-sm margin-top bg-white ">
+    <view class="padding-bottom-sm padding-lr-sm solid-bottom text-xs text-grey">
+      <view class="cf">
+        <view class="fl">
+          <text>服务单号：2019072754125412</text>
+        </view>
+        <view class="fr">
+          <view class="cu-tag light-purple radius sm">审核中</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex flex-wrap">
+      <view class="basis-xs padding-xs radius grid col-1 grid-square">
+        <view class="bg-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10002.jpg);"></view>
+      </view>
+      <view class="basis-xl padding-xs">
+        <view class="multi-ellipsis--l2 text-sm">
+          美的（Midea）美的28cm麦饭石色不粘锅炒锅 厚底少油烟煎炒锅 燃气电磁炉通用MP-CJ28WOK301
+        </view>
+        <view class="text-grey text-xs">
+          数量: 1
+        </view>
+        <view class=" text-xs radius ellipsis">
+          退货理由： 妹妹，你在帮他们给黑暗找借口吗?
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

@@ -7,7 +7,6 @@
 }
 
 .header .search{
-  background-color: #e41f19;
   /* padding: 10px 16px; */
   -webkit-align-items: center;
   align-items: center;
@@ -35,7 +34,6 @@
   font-size: 28rpx;
 }
 .header .search-hot {
-  background-color: #e41f19;
   height: 68rpx;
   line-height: 68rpx;
   display: flex;
@@ -89,7 +87,6 @@
   position: absolute;
   width: 100%;
   height: 70%;
-  background-color: #e41f19;
   top: 0;
   left: 0;
   border-bottom-left-radius: 20rpx;

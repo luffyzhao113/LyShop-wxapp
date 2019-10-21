@@ -10,6 +10,7 @@ Page({
     CustomBar: app.globalData.CustomBar,
     Custom: app.globalData.Custom,
     TabCur: 0,
+    isSpecShow: false,
     swiperList: [{
       id: 0,
       type: 'image',
@@ -28,6 +29,10 @@ Page({
     this.setData({
       TabCur: e.currentTarget.dataset.id
     })
-  }
-  
+  },
+  onChangeSpec(){
+    this.setData({
+      isSpecShow: true
+    });
+  }  
 })

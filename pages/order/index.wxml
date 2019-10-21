@@ -1,0 +1,70 @@
+<!--pages/order/index.wxml-->
+<view class="container">
+  <cu-custom is-back="{{true}}" bg-color="bg-gradual-pink"></cu-custom>
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="商品名称/商品编号/订单号" confirm-type="search"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-red shadow-blur round">搜索</button>
+    </view>
+  </view>
+
+  <scroll-view scroll-x class="bg-white border-top nav shadow-blur" scroll-with-animation scroll-left="{{scrollLeft}}">
+    <view class="cu-item {{0==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="0">
+      <text class="cuIcon-list"></text> 我的订单
+    </view>
+    <view class="cu-item {{1==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="1">
+      <text class="cuIcon-pay"></text> 待支付
+    </view>
+    <view class="cu-item {{2==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="2">
+      <text class="cuIcon-send"></text> 待发货
+    </view>
+    <view class="cu-item {{3==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="3">
+      <text class="cuIcon-deliver"></text> 待收货
+    </view>
+    <view class="cu-item {{4==TabCur?'text-red cur':''}}" bindtap="tabSelect" data-id="4">
+      <text class="cuIcon-comment"></text> 待评价
+    </view>
+  </scroll-view>
+
+  <!-- <view class="padding text-center">
+    <view class="text-sm">
+        <text class="text-gray">你暂时没有相关订单</text>
+      </view>
+  </view> -->
+
+  <view class="padding">
+    <view class="bg-white radius padding-sm text-xs text-gray margin-bottom-sm">
+      <view class=" flex flex-wrap">
+        <view class="basis-xl">订单号：20190726002154214451</view>
+        <view class="basis-xs text-right">
+          <text class="margin-right-xs">已签收</text>
+          <text class="text-center margin-right-xs">|</text>
+          <text class="cuIcon-delete"></text>
+        </view>
+      </view>
+
+      <view class="padding-tb">
+        <navigator class="cu-avatar radius lg margin-right-xs" wx:for="{{4}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);">
+          <view class="cu-tag badge bg-pink">
+            x 1
+          </view>
+        </navigator>
+      </view>
+
+      <view class=" flex flex-wrap  align-center">
+        <view class="basis-df">
+          <text class="margin-right-xs text-bold">实付金额:</text>
+          <text class="text-price text-red text-bold text-sm">80.00</text>
+        </view>
+        <view class="basis-df text-right">
+          <button class="cu-btn radius sm bg-orange margin-right-xs">立即支付</button>
+          <button class="cu-btn radius sm bg-red">再次购买</button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

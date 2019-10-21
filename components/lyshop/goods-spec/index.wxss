@@ -1,0 +1,35 @@
+/* components/lyshop/goods-spec/index.wxss */
+
+.picture {
+  height: 150rpx;
+  width: 150rpx;
+  position: absolute;
+  top: -50rpx;
+  left: 10px;
+  z-index: 1113;
+}
+
+.cu-dialog {
+  position: relative;
+  overflow: initial;
+  
+}
+.cu-dialog .content{
+  max-height: 600rpx;
+  min-height: 400rpx;
+  overflow-y: auto;
+  padding-bottom: 100rpx;
+}
+
+.cu-dialog > .padding-tb-sm {
+  padding-left: 180rpx;
+}
+
+.cu-dialog > .padding-tb {
+  text-align: left;
+}
+
+.radio-button{
+  min-width: 80rpx;
+  line-height: 40rpx;
+}

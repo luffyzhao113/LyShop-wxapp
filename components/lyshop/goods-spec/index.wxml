@@ -1,0 +1,40 @@
+<!--components/lyshop/goods-spec/index.wxml-->
+<view class="cu-modal bottom-modal {{show ? 'show' : ''}}">
+  <view class="cu-dialog bg-white">
+    <view class="picture bg-grey margin-xs padding-sm radius"></view>
+    <view class="padding-tb-sm solid-bottom flex flex-wrap header">
+      <view class="text-left padding-left basis-xl">
+        <text class="text-price text-red text-xxl">80.00</text>
+        <view class="text-xs">已选：
+          <block wx:for="{{checkeds}}">
+          {{index}}: {{item}}
+          </block>
+        </view>
+      </view>
+      <view class="text-right basis-xs padding-right padding-top-sm text-xl">
+        <text class="cuIcon-close" bindtap="onClose"></text>
+      </view>
+    </view>
+
+    <view class="padding-tb content">
+      <block wx:for="{{specs}}" wx:key>
+        <view class="cu-tag">{{item.name}}</view>
+        <view class="padding-sm flex flex-wrap">
+          <view class="padding-xs radio-button" wx:for="{{item.values}}" wx:for-index="idx" wx:for-item="value">
+            <view class="padding-xs solid {{checkeds[item.name] == value ? 'bg-red' : 'line-grey'}} radius radio-button text-center" data-name="{{item.name}}" data-value="{{value}}" bindtap="change">{{value}}</view>
+          </view>
+        </view>
+      </block>
+      <view class="cu-tag">数量</view>
+      <view class="padding-sm flex flex-wrap">
+        <stepper></stepper>
+      </view>
+    </view>
+
+    <view class="cu-bar bg-white tabbar border shop">
+      <view class="bg-orange submit">加入购物车</view>
+      <view class="bg-red submit">立即订购</view>
+    </view>
+  </view>
+  <view class="cu-modal-bg" bindtap="onClose"></view>
+</view>
